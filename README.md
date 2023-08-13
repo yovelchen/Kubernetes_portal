@@ -1,5 +1,6 @@
 # Kubernetes cluster web portal
-
+### ! dont be confused the ip given is inside the kubernetes cluster, if you want to be able to reach the app/service you need to set them as type- loadbalancer and make sure to set diffrent port to each app/service. 
+so when you click the link in the web portal you will be send to localhost:(defined port)
 This web portal provides information on all of the services running on your Kubernetes cluster.
 This information includes - 
 1. The IP and port number of the every service in every namespace
