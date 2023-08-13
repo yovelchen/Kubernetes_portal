@@ -20,6 +20,7 @@ Path: ./YAML
 Cluster URL: <Your cluster URL>  
 Namespace: "cluster-portal"
 ```
+  $ kubectl port-forward pod/cluster-portal-677b67d857-scm2k -n cluster-portal 7070:7070
 
 ### Manual deployment on Kubernetes
 To deploy the portal directly on your cluster, run the following commands:
@@ -28,3 +29,5 @@ git clone https://github.com/yovelchen/Kubernetes_portal.git
 cd Kubernetes_portal
 kubectl create namespace cluster-portal
 kubectl apply -f ./YAML
+
+  $ kubectl port-forward pod/cluster-portal-677b67d857-scm2k -n cluster-portal 7070:7070
