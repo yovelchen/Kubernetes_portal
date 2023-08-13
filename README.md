@@ -15,16 +15,16 @@ Application Name: cluster-portal
 Project Name: default  
 SYNC POLICY: Which ever you like  
 AUTO-CREATE NAMESPACE: Check  
-Repository URL: https://github.com/LiorAtari/Kubernetes_portal.git  
+Repository URL: //github.com/yovelchen/Kubernetes_portal.git
 Path: ./YAML  
 Cluster URL: <Your cluster URL>  
-Namespace: "cluster-portal
+Namespace: "cluster-portal"
 ```
 
 ### Manual deployment on Kubernetes
 To deploy the portal directly on your cluster, run the following commands:
 ```
-git clone https://github.com/LiorAtari/Kubernetes_portal.git
+git clone https: //github.com/yovelchen/Kubernetes_portal.git
 cd Kubernetes_portal
 kubectl create namespace cluster-portal
 kubectl apply -f ./YAML
