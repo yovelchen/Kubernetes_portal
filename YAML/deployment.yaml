@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cluster-portal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cluster-portal
+  template:
+    metadata:
+      labels:
+        app: cluster-portal
+    spec:
+      serviceAccountName: cluster-portal-sa
+      containers:
+        - name: cluster-portal
+          image: yovelchen/portal-app:latest
+          ports:
+            - containerPort: 7070
+    

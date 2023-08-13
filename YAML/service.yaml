@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-portal-service
+spec:
+  selector:
+    app: service-portal
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 7070
+    targetPort: 7070  # Match the containerPort from the Deployment
