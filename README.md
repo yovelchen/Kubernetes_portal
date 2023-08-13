@@ -1,5 +1,3 @@
-# Work-in-progress
-
 # Kubernetes cluster web portal
 
 This web portal provides information on all of the services running on your Kubernetes cluster.
