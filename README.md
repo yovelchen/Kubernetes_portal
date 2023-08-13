@@ -1,10 +1,8 @@
-# Kubernetes cluster web portal
-### ! dont be confused the ip given is inside the kubernetes cluster, if you want to be able to reach the app/service you need to set them as type- loadbalancer and make sure to set diffrent port to each app/service. 
-so when you click the link in the web portal you will be send to localhost:(defined port)
-This web portal provides information on all of the services running on your Kubernetes cluster.
-This information includes - 
-1. The IP and port number of the every service in every namespace
-2. An HTML link to open that service in a new tab.
+# Deploying Kubernetes Cluster Web Portal
+
+The Kubernetes Cluster Web Portal is a tool that provides information about all the services running within your Kubernetes cluster. This guide will walk you through the deployment process using either ArgoCD or manual installation.
+
+For services to be accessible from outside the cluster, ensure that you set their type as LoadBalancer and assign different ports to each service. Clicking on the HTML link in the web portal will open the service in a new tab with the URL localhost:(defined port).
 
 ## Deployment steps
 To deploy the portal, you can choose to manually install or use ArgoCD.
@@ -17,10 +15,10 @@ Application Name: cluster-portal
 Project Name: default  
 SYNC POLICY: Which ever you like  
 AUTO-CREATE NAMESPACE: Check  
-Repository URL: https://github.com/yovelchen/Kubernetes_portal.git
+Repository URL: https://github.com/LiorAtari/Kubernetes_portal.git  
 Path: ./YAML  
 Cluster URL: <Your cluster URL>  
-Namespace: "cluster-portal"
+Namespace: "cluster-portal
 ```
 
 ### Manual deployment on Kubernetes
@@ -30,4 +28,3 @@ git clone https://github.com/LiorAtari/Kubernetes_portal.git
 cd Kubernetes_portal
 kubectl create namespace cluster-portal
 kubectl apply -f ./YAML
-```
